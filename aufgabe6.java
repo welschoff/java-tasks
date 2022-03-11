@@ -9,7 +9,7 @@ public class aufgabe6 {
 
         for (int i = 0; i < 4; i++) {        
             result = !((!wert1) && wert2);
-            System.out.println("wert1: " + wert1 + "result = " + result);
+            System.out.println("wert1: " + wert1 + " wert2: " + wert2 + " result = " + result);
 
             wert1 = !wert1;
 
