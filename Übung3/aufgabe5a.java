@@ -1,3 +1,4 @@
+package Übung3;
 public class aufgabe5a {
     
     public static void main(String[] args){
