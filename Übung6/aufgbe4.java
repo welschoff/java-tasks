@@ -12,18 +12,23 @@ public class aufgbe4 {
 
         double ak = sc.nextInt();
         double jahre = 30;
-        double zinssatz = 1.10;
+        double zinssatz = 0.10;
         double ek = ak;
         double gekürzt;
-        
+
+        double ekFormel = ak * Math.pow(1 + zinssatz, jahre);
+        ekFormel = Math.floor(ekFormel * 100.0) / 100.0;
+        System.out.println("Version1= " + ekFormel);
+
 
         for (int i = 0; i <= jahre; i++) {
-            ek = ek * zinssatz;
+            ek = (ek * (1 + zinssatz));
             sc.close();
         }
-        gekürzt = ek * 100;
-        System.out.println(Math.floor(gekürzt) / 100);
-        System.out.println((Math.floor(gekürzt) / 100) - ak);
-        System.out.println((Math.floor(gekürzt * 100000) / 100 - ak));
+        
+        gekürzt = Math.floor(ek * 100) / 100;
+        System.out.println("Version2= " + gekürzt);
+        System.out.println("Diff=" + (gekürzt - ekFormel));
+        System.out.println("Diff=" + (gekürzt - ekFormel) * 100000);
     }
 }

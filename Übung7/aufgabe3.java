@@ -17,5 +17,4 @@ public class aufgabe3 {
             System.out.println(c + " float");
         }
     }
-
 }
